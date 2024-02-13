@@ -1,6 +1,8 @@
 package org.unizd.rma.holovka.breweriesapp
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.unizd.rma.holovka.breweriesapp.databinding.ActivityBreweryDetailsBinding
 
@@ -13,22 +15,22 @@ class BreweryDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val brewery = intent.getParcelableExtra<Brewery>("brewery")
-        brewery?.let { brewery ->
+        brewery?.let {
             with(binding) {
-                textViewName.text = formatAttribute("Name", brewery.name)
-                textViewType.text = formatAttribute("Brewery Type", brewery.brewery_type)
-                textViewAddress.text = formatAttribute("Address", brewery.address_1)
-                textViewCity.text = formatAttribute("City", brewery.city)
-                textViewStateProvince.text = formatAttribute("State/Province", brewery.state_province)
-                textViewPostalCode.text = formatAttribute("Postal Code", brewery.postal_code)
-                textViewCountry.text = formatAttribute("Country", brewery.country)
-                textViewPhone.text = formatAttribute("Phone", brewery.phone)
-                textViewWebsite.text = formatAttribute("Website", brewery.website_url)
-                textViewId.text = formatAttribute("ID", brewery.id)
-                textViewLongitude.text = formatAttribute("Longitude", brewery.longitude)
-                textViewLatitude.text = formatAttribute("Latitude", brewery.latitude)
-                textViewState.text = formatAttribute("State", brewery.state)
-                textViewStreet.text = formatAttribute("Street", brewery.street)
+                setAttributeOrHide(textViewName, "Name", brewery.name)
+                setAttributeOrHide(textViewType, "Brewery Type", brewery.brewery_type)
+                setAttributeOrHide(textViewAddress, "Address", brewery.address_1)
+                setAttributeOrHide(textViewCity, "City", brewery.city)
+                setAttributeOrHide(textViewStateProvince, "State/Province", brewery.state_province)
+                setAttributeOrHide(textViewPostalCode, "Postal Code", brewery.postal_code)
+                setAttributeOrHide(textViewCountry, "Country", brewery.country)
+                setAttributeOrHide(textViewPhone, "Phone", brewery.phone)
+                setAttributeOrHide(textViewWebsite, "Website", brewery.website_url)
+                setAttributeOrHide(textViewId, "ID", brewery.id)
+                setAttributeOrHide(textViewLongitude, "Longitude", brewery.longitude)
+                setAttributeOrHide(textViewLatitude, "Latitude", brewery.latitude)
+                setAttributeOrHide(textViewState, "State", brewery.state)
+                setAttributeOrHide(textViewStreet, "Street", brewery.street)
             }
         }
 
@@ -37,11 +39,12 @@ class BreweryDetailsActivity : AppCompatActivity() {
         }
     }
 
-    private fun formatAttribute(attributeName: String, value: String?): String {
-        return if (value.isNullOrEmpty()) {
-            ""
+    private fun setAttributeOrHide(textView: TextView, attributeName: String, value: String?) {
+        if (value.isNullOrEmpty() || value == "null") {
+            textView.visibility = View.GONE
         } else {
-            "$attributeName: $value"
+            textView.visibility = View.VISIBLE
+            textView.text = "$attributeName: $value"
         }
     }
 }
