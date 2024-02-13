@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BreweryDetailsActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brewery Name"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brewery Type"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewName"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brewery Address"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewType"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brewery City"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewAddress"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewStateProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State/Province"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewCity"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewPostalCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Postal Code"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewStateProvince"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewPostalCode"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewCountry"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewPhone"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewWebsite"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewId"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewLongitude"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewLatitude"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewState"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
